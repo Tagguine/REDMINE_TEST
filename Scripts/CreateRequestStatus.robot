@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    scripts to test create a new group
+Documentation    script to test create a new request status - Redmine
 Library    SeleniumLibrary
 Variables    ../Ressources/Locators/locators.py
 Resource    ../Ressources/Keywords/Keywords.robot
@@ -9,14 +9,15 @@ ${vURL}    http://localhost:8083
 ${vBrowser}    Chrome
 ${vUsername}    6402910
 ${vPassword}    6402910
-${vGroupName}    6402910
+${vStatusName}    6402910
+${vDescriptionName}    Examen intra    
 
 *** Test Cases ***
 
-Create Group
+Create Request Status
     Login    ${vURL}    ${vBrowser}    ${vUsername}    ${vPassword}
-    CreateGroup    ${vGroupName}
-    # LogOut
+    CreateRequestStatus    ${vStatusName}    ${vDescriptionName}
+    LogOut
 
 
 

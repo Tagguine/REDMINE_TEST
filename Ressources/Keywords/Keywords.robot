@@ -31,6 +31,20 @@ CreateGroup
     Wait Until Element Is Visible    ${message_Success}    5s
     Element Text Should Be    ${message_Success}    Création effectuée avec succès.
 
+CreateRequestStatus
+    [Arguments]    ${vStatusName}    ${vDescriptionName}
+    Click Element    ${link_Administration}
+    Title Should Be    Administration - Redmine
+    Click Element    ${link_RequestStatus}
+    Title Should Be    Statuts de demandes - Redmine
+    Click Element    ${link_NewStatus}
+    Title Should Be    Nouveau statut - Statuts de demandes - Redmine
+    Input Text    ${input_StatusName}    ${vStatusName}
+    Input Text    ${input_DescriptionName}    ${vDescriptionName}
+    Click Element    ${input_CreateStatus}
+    Wait Until Element Is Visible    ${message_Success}    5s
+    Element Text Should Be    ${message_Success}    Création effectuée avec succès.
+
 LogOut
     Click Element    ${link_Logout}
     Close Browser
