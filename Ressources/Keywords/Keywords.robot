@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Première suite de test avec un script de connexion
+Documentation    Scripts to test create a new group AND create a new request status - Redmine
 Library    SeleniumLibrary
 Variables    ../Locators/locators.py
 

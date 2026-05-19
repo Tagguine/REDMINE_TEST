@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Script to create a new Group
+Documentation    Scripts to test create a new group AND create a new request status - Redmine
 Library    SeleniumLibrary
 Variables    ../Ressources/Locators/locators.py
 Resource    ../Ressources/Keywords/Keywords.robot
