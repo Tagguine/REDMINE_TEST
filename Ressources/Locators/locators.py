@@ -1,0 +1,12 @@
+input_Username = "//*[@id='username']"
+input_Password = "//*[@id='password']"
+input_Submit = "//*[@id='login-submit']"
+link_Username = "//*[@id='loggedas']/a"
+link_Administration = "//*[@id='top-menu']/ul/li[4]/a"
+link_Deconnexion = "//*[@id='account']/ul/li[2]/a"
+message_succes = "//*[@id='flash_notice']"
+link_Groupes= "//*[@id='admin-menu']/ul/li[3]/a"
+link_New_Groupe= "//*[@id='content']/div[1]/a"
+input_Name_Groupe= "//*[@id='group_name']"
+input_Create_Groupe= "//*[@id='new_group']/p/input[1]"
+

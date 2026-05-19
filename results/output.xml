@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-05-19T15:14:09.415891" rpa="false" schemaversion="5">
+<suite id="s1" name="REDMINE TEST" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST">
+<suite id="s1-s1" name="Scripts" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST\Scripts">
+<suite id="s1-s1-s1" name="CreerGroupe" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST\Scripts\CreerGroupe.robot">
+<test id="s1-s1-s1-t1" name="Creer Groupe" line="16">
+<kw name="Login" owner="Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:10.106366" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8083/login'.</msg>
+<msg time="2026-05-19T15:14:10.637100" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>${vURL}/login</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-05-19T15:14:10.105202" elapsed="4.677378"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-05-19T15:14:14.788286" elapsed="0.140871"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:14.938416" level="INFO">Typing text '6402910' into text field '//*[@id='username']'.</msg>
+<arg>${input_Username}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:14.931330" elapsed="0.708919"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:15.644470" level="INFO">Typing text '6402910' into text field '//*[@id='password']'.</msg>
+<arg>${input_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:15.641865" elapsed="0.438310"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:16.085194" level="INFO">Clicking element '//*[@id='login-submit']'.</msg>
+<arg>${input_Submit}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:16.082139" elapsed="0.568750"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Ma page - Redmine</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-19T15:14:16.655079" elapsed="0.604540"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:17.263772" level="INFO">Verifying element '//*[@id='loggedas']/a' contains exact text '6402910'.</msg>
+<arg>${link_Username}</arg>
+<arg>${vUsername}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-05-19T15:14:17.261033" elapsed="0.229227"/>
+</kw>
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<status status="PASS" start="2026-05-19T15:14:10.100502" elapsed="7.390715"/>
+</kw>
+<kw name="CreateGroupe" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:17.496535" level="INFO">Clicking element '//*[@id='top-menu']/ul/li[4]/a'.</msg>
+<arg>${link_Administration}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:17.495255" elapsed="0.518546"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Administration</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-19T15:14:18.014881" elapsed="0.045851"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:18.062697" level="INFO">Clicking element '//*[@id='admin-menu']/ul/li[3]/a'.</msg>
+<arg>${link_Groupes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:18.061504" elapsed="0.526199"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Groupes</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-19T15:14:18.589335" elapsed="0.052346"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:18.644576" level="INFO">Clicking element '//*[@id='content']/div[1]/a'.</msg>
+<arg>${link_New_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:18.642928" elapsed="0.503413"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Nouveau groupe</arg>
+<arg>5s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-05-19T15:14:19.147250" elapsed="0.051521"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:19.203111" level="INFO">Typing text '6402910' into text field '//*[@id='group_name']'.</msg>
+<arg>${input_Name_Groupe}</arg>
+<arg>${vNameGroupe}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:19.199535" elapsed="0.367026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:19.571317" level="INFO">Clicking element '//*[@id='new_group']/p/input[1]'.</msg>
+<arg>${input_Create_Groupe}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:19.568861" elapsed="0.470458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${message_succes}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-05-19T15:14:20.040784" elapsed="0.576817"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:20.620054" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<arg>${message_succes}</arg>
+<arg>Création effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2026-05-19T15:14:20.618490" elapsed="0.077142"/>
+</kw>
+<arg>${vNameGroupe}</arg>
+<status status="PASS" start="2026-05-19T15:14:17.493282" elapsed="3.203141"/>
+</kw>
+<kw name="LogOut" owner="Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T15:14:20.700530" level="INFO">Clicking element '//*[@id='account']/ul/li[2]/a'.</msg>
+<arg>${link_Deconnexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T15:14:20.699020" elapsed="0.413168"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-05-19T15:14:21.113051" elapsed="3.048887"/>
+</kw>
+<status status="PASS" start="2026-05-19T15:14:20.697794" elapsed="3.464920"/>
+</kw>
+<status status="PASS" start="2026-05-19T15:14:10.090832" elapsed="14.073016"/>
+</test>
+<doc>Script qui permet de creer un nouveau Groupe</doc>
+<status status="PASS" start="2026-05-19T15:14:09.553642" elapsed="15.084389"/>
+</suite>
+<status status="PASS" start="2026-05-19T15:14:09.530965" elapsed="15.121621"/>
+</suite>
+<status status="PASS" start="2026-05-19T15:14:09.429208" elapsed="15.265482"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="REDMINE TEST" id="s1" pass="1" fail="0" skip="0">REDMINE TEST</stat>
+<stat name="Scripts" id="s1-s1" pass="1" fail="0" skip="0">REDMINE TEST.Scripts</stat>
+<stat name="CreerGroupe" id="s1-s1-s1" pass="1" fail="0" skip="0">REDMINE TEST.Scripts.CreerGroupe</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-05-19T15:14:10.637100" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
