@@ -18,21 +18,21 @@ Login
     Wait Until Page Contains    Ma page - Redmine    5s
     Element Text Should Be    ${link_Username}    ${vUsername}
 
-CreateGroupe
-    [Arguments]    ${vNameGroupe}
+CreateGroup
+    [Arguments]    ${vGroupName}
     Click Element    ${link_Administration}
     Title Should Be    Administration - Redmine
-    Click Element    ${link_Groupes}
+    Click Element    ${link_Groups}
     Title Should Be    Groupes - Redmine
-    Click Element    ${link_New_Groupe}
+    Click Element    ${link_NewGroup}
     Title Should Be    Nouveau groupe - Groupes - Redmine
-    Input Text    ${input_Name_Groupe}    ${vNameGroupe} 
-    Click Element    ${input_Create_Groupe}
-    Wait Until Element Is Visible    ${message_succes}    5s
-    Element Text Should Be    ${message_succes}    Création effectuée avec succès.
-     
+    Input Text    ${input_GroupName}    ${vGroupName}
+    Click Element    ${input_CreateGroup}
+    Wait Until Element Is Visible    ${message_Success}    5s
+    Element Text Should Be    ${message_Success}    Création effectuée avec succès.
+
 LogOut
-    Click Element    ${link_Deconnexion}
+    Click Element    ${link_Logout}
     Close Browser
 
     
