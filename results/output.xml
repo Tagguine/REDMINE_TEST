@@ -1,170 +1,291 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-05-19T16:25:59.439667" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.2 (Python 3.14.4 on win32)" generated="2026-05-19T17:07:58.979239" rpa="false" schemaversion="5">
 <suite id="s1" name="REDMINE TEST" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST">
 <suite id="s1-s1" name="Scripts" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST\Scripts">
-<suite id="s1-s1-s1" name="CreerStatutDemande" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST\Scripts\CreerStatutDemande.robot">
-<test id="s1-s1-s1-t1" name="Create Request Status" line="18">
+<suite id="s1-s1-s1" name="CreateDeleteAnnouncement" source="D:\Cours SQL\session 3\420-L14-BB TECHNIQUES D'AUTOMATISATION DE TESTS\REDMINE_TEST\Scripts\CreateDeleteAnnouncement.robot">
+<test id="s1-s1-s1-t1" name="Create And Delete Announcement" line="19">
 <kw name="Login" owner="Keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:00.591834" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8083/login'.</msg>
-<msg time="2026-05-19T16:26:01.274820" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-05-19T17:08:00.654126" level="INFO">Opening browser 'Chrome' to base url 'http://localhost:8083/login'.</msg>
+<msg time="2026-05-19T17:08:01.678622" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>${vURL}/login</arg>
 <arg>${vBrowser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-05-19T16:26:00.590266" elapsed="6.421377"/>
+<status status="PASS" start="2026-05-19T17:08:00.651839" elapsed="8.123123"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-05-19T16:26:07.013366" elapsed="0.153061"/>
+<status status="PASS" start="2026-05-19T17:08:08.776696" elapsed="0.422487"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:07.176269" level="INFO">Typing text '6402910' into text field '//*[@id='username']'.</msg>
+<msg time="2026-05-19T17:08:09.207521" level="INFO">Typing text '6402910' into text field '//*[@id='username']'.</msg>
 <arg>${input_Username}</arg>
 <arg>${vUsername}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:07.170978" elapsed="1.621424"/>
+<status status="PASS" start="2026-05-19T17:08:09.202162" elapsed="2.957056"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:08.796936" level="INFO">Typing text '6402910' into text field '//*[@id='password']'.</msg>
+<msg time="2026-05-19T17:08:12.165624" level="INFO">Typing text '6402910' into text field '//*[@id='password']'.</msg>
 <arg>${input_Password}</arg>
 <arg>${vPassword}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:08.794201" elapsed="0.701066"/>
+<status status="PASS" start="2026-05-19T17:08:12.160954" elapsed="1.979236"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:09.498760" level="INFO">Clicking element '//*[@id='login-submit']'.</msg>
+<msg time="2026-05-19T17:08:14.143512" level="INFO">Clicking element '//*[@id='login-submit']'.</msg>
 <arg>${input_Submit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:09.496924" elapsed="1.317706"/>
+<status status="PASS" start="2026-05-19T17:08:14.141560" elapsed="4.020632"/>
 </kw>
 <kw name="Wait Until Page Contains" owner="SeleniumLibrary">
 <arg>Ma page - Redmine</arg>
 <arg>5s</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" start="2026-05-19T16:26:10.816401" elapsed="0.105569"/>
+<status status="PASS" start="2026-05-19T17:08:18.164195" elapsed="0.297412"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:10.924727" level="INFO">Verifying element '//*[@id='loggedas']/a' contains exact text '6402910'.</msg>
+<msg time="2026-05-19T17:08:18.465239" level="INFO">Verifying element '//*[@id='loggedas']/a' contains exact text '6402910'.</msg>
 <arg>${link_Username}</arg>
 <arg>${vUsername}</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-05-19T16:26:10.922981" elapsed="0.110095"/>
+<status status="PASS" start="2026-05-19T17:08:18.462867" elapsed="0.261730"/>
 </kw>
 <arg>${vURL}</arg>
 <arg>${vBrowser}</arg>
 <arg>${vUsername}</arg>
 <arg>${vPassword}</arg>
-<status status="PASS" start="2026-05-19T16:26:00.583254" elapsed="10.451015"/>
+<status status="PASS" start="2026-05-19T17:08:00.644269" elapsed="18.081353"/>
 </kw>
-<kw name="CreateRequestStatus" owner="Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:11.042363" level="INFO">Clicking element '//*[@id='top-menu']/ul/li[4]/a'.</msg>
-<arg>${link_Administration}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:11.040414" elapsed="0.644410"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:11.729760" level="INFO">Page title is 'Administration - Redmine'.</msg>
-<arg>Administration - Redmine</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-05-19T16:26:11.686703" elapsed="0.044724"/>
+<kw name="CreateAnnouncement" owner="Keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-05-19T17:08:18.734306" level="INFO">Opening url 'http://localhost:8083/projects/6402910'</msg>
+<arg>${vURL}/projects/${vProject}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-05-19T17:08:18.732420" elapsed="0.229627"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:11.738894" level="INFO">Clicking element '//*[@id='admin-menu']/ul/li[6]/a'.</msg>
-<arg>${link_RequestStatus}</arg>
+<msg time="2026-05-19T17:08:18.966269" level="INFO">Clicking element '//a[text()='Annonces']'.</msg>
+<arg>${link_News}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:11.732657" elapsed="1.389672"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:13.147035" level="INFO">Page title is 'Statuts de demandes - Redmine'.</msg>
-<arg>Statuts de demandes - Redmine</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-05-19T16:26:13.123952" elapsed="0.024260"/>
+<status status="PASS" start="2026-05-19T17:08:18.964159" elapsed="2.219521"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:13.151880" level="INFO">Clicking element '//*[@id='content']/div[1]/a'.</msg>
-<arg>${link_NewStatu}</arg>
+<msg time="2026-05-19T17:08:21.187909" level="INFO">Clicking element '//*[@id='content']/div[1]/a'.</msg>
+<arg>${link_NewAnnouncement}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:13.149061" elapsed="0.792374"/>
-</kw>
-<kw name="Title Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:13.973224" level="INFO">Page title is 'Nouveau statut - Statuts de demandes - Redmine'.</msg>
-<arg>Nouveau statut - Statuts de demandes - Redmine</arg>
-<doc>Verifies that the current page title equals ``title``.</doc>
-<status status="PASS" start="2026-05-19T16:26:13.942861" elapsed="0.032758"/>
+<status status="PASS" start="2026-05-19T17:08:21.185315" elapsed="1.102072"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:13.979724" level="INFO">Typing text '6402910' into text field '//*[@id='issue_status_name']'.</msg>
-<arg>${input_StatuName}</arg>
-<arg>${vStatuName}</arg>
+<msg time="2026-05-19T17:08:22.291935" level="INFO">Typing text '6402910' into text field '//*[@id='news_title']'.</msg>
+<arg>${input_AnnouncementTitle}</arg>
+<arg>${vTitle}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:13.976993" elapsed="0.345013"/>
+<status status="PASS" start="2026-05-19T17:08:22.288865" elapsed="1.322168"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:14.325199" level="INFO">Typing text 'Examen intra' into text field '//*[@id='issue_status_description']'.</msg>
-<arg>${input_DescriptionName}</arg>
-<arg>${vDescriptionName}</arg>
+<msg time="2026-05-19T17:08:23.615662" level="INFO">Typing text 'Examen intra' into text field '//*[@id='news_summary']'.</msg>
+<arg>${input_AnnouncementSummary}</arg>
+<arg>${vSummary}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:14.323017" elapsed="0.388304"/>
+<status status="PASS" start="2026-05-19T17:08:23.612457" elapsed="0.896464"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-05-19T17:08:24.513773" level="INFO">Typing text 'Examen intra' into text field '//*[@id='news_description']'.</msg>
+<arg>${input_AnnouncementDescription}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T17:08:24.510493" elapsed="2.004293"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:14.714887" level="INFO">Clicking element '//*[@id='new_issue_status']/input[3]'.</msg>
-<arg>${input_CreateStatu}</arg>
+<msg time="2026-05-19T17:08:26.520055" level="INFO">Clicking element '//*[@id='news-form']/input[3]'.</msg>
+<arg>${input_CreateAnnouncement}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:14.712937" elapsed="0.509946"/>
+<status status="PASS" start="2026-05-19T17:08:26.516881" elapsed="1.578016"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${message_Success}</arg>
 <arg>5s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-05-19T16:26:15.224255" elapsed="0.441940"/>
+<status status="PASS" start="2026-05-19T17:08:28.097396" elapsed="1.643456"/>
 </kw>
 <kw name="Element Text Should Be" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:15.668924" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
+<msg time="2026-05-19T17:08:29.745581" level="INFO">Verifying element '//*[@id='flash_notice']' contains exact text 'Création effectuée avec succès.'.</msg>
 <arg>${message_Success}</arg>
 <arg>Création effectuée avec succès.</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<status status="PASS" start="2026-05-19T16:26:15.667151" elapsed="0.074963"/>
+<status status="PASS" start="2026-05-19T17:08:29.742695" elapsed="0.699793"/>
 </kw>
-<arg>${vStatuName}</arg>
-<arg>${vDescriptionName}</arg>
-<status status="PASS" start="2026-05-19T16:26:11.037177" elapsed="4.705750"/>
+<arg>${vURL}</arg>
+<arg>${vProject}</arg>
+<arg>${vTitle}</arg>
+<arg>${vSummary}</arg>
+<arg>${vDescription}</arg>
+<status status="PASS" start="2026-05-19T17:08:18.728489" elapsed="11.715110"/>
+</kw>
+<kw name="DeleteAnnouncement" owner="Keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-05-19T17:08:30.468101" level="INFO">Opening url 'http://localhost:8083/projects/6402910'</msg>
+<arg>${vURL}/projects/${vProject}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-05-19T17:08:30.466008" elapsed="0.500575"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-05-19T17:08:30.971649" level="INFO">Clicking element '//a[text()='Annonces']'.</msg>
+<arg>${link_News}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-05-19T17:08:30.969721" elapsed="2.592687"/>
+</kw>
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2026-05-19T17:08:33.568479" level="INFO">Clicking link '6402910'.</msg>
+<msg time="2026-05-19T17:08:35.505923" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-12.png"&gt;&lt;img src="selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-05-19T17:08:35.507955" level="FAIL">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff748d10245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff748d102b0+14740]
+	chromedriver!(No symbol) [0x7ff748a7d5b6]
+	chromedriver!(No symbol) [0x7ff748ad81f4]
+	chromedriver!(No symbol) [0x7ff748acb106]
+	chromedriver!(No symbol) [0x7ff748afff6a]
+	chromedriver!(No symbol) [0x7ff748aca986]
+	chromedriver!(No symbol) [0x7ff748b24818]
+	chromedriver!(No symbol) [0x7ff748ac9018]
+	chromedriver!(No symbol) [0x7ff748ac9f03]
+	chromedriver!GetHandleVerifier [0x7ff7490258f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff74901fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7490430b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff748d2d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff748d3600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff748d19634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff748d197e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff748cfe2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ff8208ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff82254427c+2c]
+</msg>
+<arg>${vTitle}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2026-05-19T17:08:33.564495" elapsed="3.595920">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff748d10245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff748d102b0+14740]
+	chromedriver!(No symbol) [0x7ff748a7d5b6]
+	chromedriver!(No symbol) [0x7ff748ad81f4]
+	chromedriver!(No symbol) [0x7ff748acb106]
+	chromedriver!(No symbol) [0x7ff748afff6a]
+	chromedriver!(No symbol) [0x7ff748aca986]
+	chromedriver!(No symbol) [0x7ff748b24818]
+	chromedriver!(No symbol) [0x7ff748ac9018]
+	chromedriver!(No symbol) [0x7ff748ac9f03]
+	chromedriver!GetHandleVerifier [0x7ff7490258f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff74901fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7490430b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff748d2d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff748d3600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff748d19634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff748d197e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff748cfe2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ff8208ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff82254427c+2c]
+</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${link_DeleteAnnouncement}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-05-19T17:08:37.172401" elapsed="0.002427"/>
+</kw>
+<kw name="Handle Alert" owner="SeleniumLibrary">
+<doc>Handles the current alert and returns its message.</doc>
+<status status="NOT RUN" start="2026-05-19T17:08:37.176475" elapsed="0.002057"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${message_Success}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2026-05-19T17:08:37.179997" elapsed="0.003096"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${message_Success}</arg>
+<arg>Suppression effectuée avec succès.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2026-05-19T17:08:37.185926" elapsed="0.001152"/>
+</kw>
+<arg>${vURL}</arg>
+<arg>${vProject}</arg>
+<arg>${vTitle}</arg>
+<status status="FAIL" start="2026-05-19T17:08:30.462496" elapsed="6.726176">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff748d10245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff748d102b0+14740]
+	chromedriver!(No symbol) [0x7ff748a7d5b6]
+	chromedriver!(No symbol) [0x7ff748ad81f4]
+	chromedriver!(No symbol) [0x7ff748acb106]
+	chromedriver!(No symbol) [0x7ff748afff6a]
+	chromedriver!(No symbol) [0x7ff748aca986]
+	chromedriver!(No symbol) [0x7ff748b24818]
+	chromedriver!(No symbol) [0x7ff748ac9018]
+	chromedriver!(No symbol) [0x7ff748ac9f03]
+	chromedriver!GetHandleVerifier [0x7ff7490258f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff74901fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7490430b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff748d2d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff748d3600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff748d19634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff748d197e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff748cfe2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ff8208ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff82254427c+2c]
+</status>
 </kw>
 <kw name="LogOut" owner="Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-05-19T16:26:15.748696" level="INFO">Clicking element '//*[@id='account']/ul/li[2]/a'.</msg>
-<arg>${link_Logout}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-05-19T16:26:15.746256" elapsed="0.345023"/>
+<status status="NOT RUN" start="2026-05-19T17:08:37.274633" elapsed="0.002122"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-05-19T16:26:16.092206" elapsed="3.097304"/>
-</kw>
-<status status="PASS" start="2026-05-19T16:26:15.744569" elapsed="3.446062"/>
-</kw>
-<status status="PASS" start="2026-05-19T16:26:00.546069" elapsed="18.645917"/>
+<status status="FAIL" start="2026-05-19T17:08:00.580469" elapsed="36.714828">ElementNotInteractableException: Message: element not interactable
+  (Session info: chrome=148.0.7778.168); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff748d10245+146d5]
+	chromedriver!GetHandleVerifier [0x7ff748d102b0+14740]
+	chromedriver!(No symbol) [0x7ff748a7d5b6]
+	chromedriver!(No symbol) [0x7ff748ad81f4]
+	chromedriver!(No symbol) [0x7ff748acb106]
+	chromedriver!(No symbol) [0x7ff748afff6a]
+	chromedriver!(No symbol) [0x7ff748aca986]
+	chromedriver!(No symbol) [0x7ff748b24818]
+	chromedriver!(No symbol) [0x7ff748ac9018]
+	chromedriver!(No symbol) [0x7ff748ac9f03]
+	chromedriver!GetHandleVerifier [0x7ff7490258f9+329d89]
+	chromedriver!GetHandleVerifier [0x7ff74901fe46+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7490430b2+347542]
+	chromedriver!GetHandleVerifier [0x7ff748d2d3d5+31865]
+	chromedriver!GetHandleVerifier [0x7ff748d3600c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff748d19634+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff748d197e6+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff748cfe2f7+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ff8208ae957+17]
+	ntdll!RtlUserThreadStart [0x7ff82254427c+2c]
+</status>
 </test>
-<doc>script to test create a new request status - Redmine</doc>
-<status status="PASS" start="2026-05-19T16:25:59.643157" elapsed="19.568002"/>
+<doc>Script to test Create and Delete an Announcement in a project - Redmine</doc>
+<status status="FAIL" start="2026-05-19T17:07:59.244712" elapsed="38.410900"/>
 </suite>
-<status status="PASS" start="2026-05-19T16:25:59.629036" elapsed="19.631145"/>
+<status status="FAIL" start="2026-05-19T17:07:59.224329" elapsed="38.794277"/>
 </suite>
-<status status="PASS" start="2026-05-19T16:25:59.461165" elapsed="19.897714"/>
+<status status="FAIL" start="2026-05-19T17:07:59.010776" elapsed="39.112676"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="REDMINE TEST" id="s1" pass="1" fail="0" skip="0">REDMINE TEST</stat>
-<stat name="Scripts" id="s1-s1" pass="1" fail="0" skip="0">REDMINE TEST.Scripts</stat>
-<stat name="CreerStatutDemande" id="s1-s1-s1" pass="1" fail="0" skip="0">REDMINE TEST.Scripts.CreerStatutDemande</stat>
+<stat name="REDMINE TEST" id="s1" pass="0" fail="1" skip="0">REDMINE TEST</stat>
+<stat name="Scripts" id="s1-s1" pass="0" fail="1" skip="0">REDMINE TEST.Scripts</stat>
+<stat name="CreateDeleteAnnouncement" id="s1-s1-s1" pass="0" fail="1" skip="0">REDMINE TEST.Scripts.CreateDeleteAnnouncement</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-05-19T16:26:01.274820" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-05-19T17:08:01.678622" level="WARN">The chromedriver version (147.0.7727.57) detected in PATH at C:\Program Files\Python314\Scripts\chromedriver.exe might not be compatible with the detected chrome version (148.0.7778.168); currently, chromedriver 148.0.7778.167 is recommended for chrome 148.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
