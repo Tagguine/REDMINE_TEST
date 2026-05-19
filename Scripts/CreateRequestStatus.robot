@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    script to test create a new request status - Redmine
+Documentation    Script to test Create a new Request Status - Redmine
 Library    SeleniumLibrary
 Variables    ../Ressources/Locators/locators.py
 Resource    ../Ressources/Keywords/Keywords.robot

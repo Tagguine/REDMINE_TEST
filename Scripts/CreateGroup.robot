@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    scripts to test create a new group
+Documentation    Script to test Create a new Group - Redmine
 Library    SeleniumLibrary
 Variables    ../Ressources/Locators/locators.py
 Resource    ../Ressources/Keywords/Keywords.robot
@@ -16,7 +16,7 @@ ${vGroupName}    6402910
 Create Group
     Login    ${vURL}    ${vBrowser}    ${vUsername}    ${vPassword}
     CreateGroup    ${vGroupName}
-    # LogOut
+    LogOut
 
 
 
